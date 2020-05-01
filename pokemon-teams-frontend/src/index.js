@@ -10,11 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const fetchAllTrainers = () => {
         return fetch(trainersUrl)
         .then((resp) => resp.json())
-        .then((trainers) => renderTrainers(trainers));
+        .then((trainers) => renderTrainers(trainers))
     };
     // fetchAllTrainers().then(renderAllTrainers)
     const renderTrainers = (trainers) => {
-        trainers.forEach(renderTrainer);
+        console.log(trainers)
+        trainers.forEach(renderTrainer)
     };
 
     const renderTrainer = (trainer) => {
